@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "matangover.mypy",
+        "ms-python.python",
+        "github.copilot-chat",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "streetsidesoftware.code-spell-checker",
+        "LittleFoxTeam.vscode-python-test-adapter",
+        "EditorConfig.EditorConfig",
+        "charliermarsh.ruff"
+    ]
+}

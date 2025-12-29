@@ -1,0 +1,25 @@
+{
+    "ignorePaths": [
+        ".git/",
+        ".gitignore",
+        ".venv",
+        ".github/",
+        ".env*",
+        ".vscode/",
+        "ci/"
+    ],
+    "dictionaryDefinitions": [
+        {
+            "name": "project-related-words",
+            "path": "./project-related-words.txt",
+            "addWords": true
+        }
+    ],
+    "dictionaries": [
+        "python",
+        "python-common",
+        "html",
+        "docker",
+        "project-related-words"
+    ]
+}

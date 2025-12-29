@@ -1,0 +1,30 @@
+{
+    "files.exclude": {
+      "**/__pycache__": true
+    },
+
+    "editor.rulers": [100],
+
+    "editor.bracketPairColorization.enabled": true,
+
+    "python.analysis.typeCheckingMode": "off",
+
+    "python.analysis.inlayHints.functionReturnTypes": true,
+
+    "python.analysis.extraPaths": [
+      "./src"
+    ],
+
+    "[python]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+
+    "python.linting.ignorePatterns": [
+      "**/site-packages/**/*.py",
+      ".vscode/*.py",
+      ".venv/**/*.py",
+      "venv/**/*.py",
+      "config/**/*.py"
+    ]
+  }

@@ -1,0 +1,71 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-toml
+      - id: check-json
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: detect-aws-credentials
+        args: [--allow-missing-credentials]
+      - id: debug-statements
+      - id: check-merge-conflict
+      - id: detect-private-key
+
+  - repo: https://github.com/asottile/add-trailing-comma
+    rev: v3.1.0
+    hooks:
+      - id: add-trailing-comma
+
+  # TODO: Wait for release https://github.com/PyCQA/docformatter/issues/293
+  # Problem: https://github.com/PyCQA/docformatter/pull/287#issue-2568300589
+  - repo: https://github.com/pycqa/docformatter
+    rev: eb1df347edd128b30cd3368dddc3aa65edcfac38
+    hooks:
+      - id: docformatter
+
+  # - repo: https://github.com/astral-sh/ruff-pre-commit
+  #   rev: v0.9.7
+  #   hooks:
+  #     - id: ruff
+  #     - id: ruff-format
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.0
+    hooks:
+      - id: gitleaks
+
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.19.1
+    hooks:
+      - id: gitlint
+      - id: gitlint-ci
+        args:
+          [
+            -c,
+            'ignore-by-title.regex=^(\[automated-commit\])',
+            --commits,
+            origin/develop..,
+          ]
+
+  - repo: https://github.com/python-poetry/poetry
+    rev: 2.1.1
+    hooks:
+      - id: poetry-check
+        args: ["--lock"]
+
+    # Typo search tool
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v8.17.3
+    hooks:
+      - id: cspell
+
+  # - repo: local
+  #   hooks:
+  #     # Linters below require full python environment to run
+  #     - id: local-linters
+  #       name: local linters
+  #       entry: inv linters.all
+  #       language: system
+  #       pass_filenames: false
+  #       types: [python]
