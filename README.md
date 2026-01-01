@@ -3,6 +3,8 @@
 A sample Scrapy project which scrapes CME Conferences provided by American Medical Seminars.
 ([Website URL](https://www.americanmedicalseminars.com/live/))
 
+![CME Conference Grabber](./grabber_running_examples/cme-grabber.gif)
+
 ## Installing project for developing on local PC
 
 You have to have the following tools installed prior initializing the project:
